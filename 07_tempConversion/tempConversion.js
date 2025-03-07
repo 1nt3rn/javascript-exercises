@@ -1,7 +1,13 @@
-const convertToCelsius = function() {
+const roundOneDecimal = (num) => {
+  return Math.round(num * 10) / 10;
 };
 
-const convertToFahrenheit = function() {
+const convertToCelsius = function(degrees) {
+    return roundOneDecimal((degrees-32) * (5 / 9));
+};
+
+const convertToFahrenheit = function(degrees) {
+    return roundOneDecimal(degrees * 9 / 5 + 32);
 };
 
 // Do not edit below this line
